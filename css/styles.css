@@ -1,0 +1,284 @@
+/*
+	Mary Welcey Guillen
+*/
+
+:root {
+   --bg-color: #000;
+   --bg-img: ;
+   --font: 'Days One', Arial, sans-serif;
+
+   --primary: #FFE81F;
+   --white: #fff;
+   --black: #000;
+   --light-grey: #1D1E1F;
+   --fw-large: 800;
+   --fw-light: 100;
+
+   --border: solid #FFE81F;
+   --border-dashed: 0.1px dashed rgb(106, 104, 104);
+   --bs-btn-hover-color: var(--primary);
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: var(--font);
+   min-height: 100vh;
+   font-size: 16px;
+}
+
+nav {
+   border-bottom: var(--border-dashed);
+   min-height: 5.31rem;
+}
+
+h1,
+.navbar-brand,
+.nav-link:focus,
+.nav-link:hover,
+.navbar-brand:focus,
+.navbar-brand:hover,
+.highlight {
+   color: var(--primary);
+}
+
+h2,
+.nav-link,
+.navbar-brand:hover,
+.experience .card-body p {
+   color: var(--white);
+}
+
+p,
+.skills h2 {
+   color: var(--black);
+}
+
+p {
+   font-weight: var(--fw-light);
+}
+
+nav,
+header,
+.skills .card-body,
+section:has(.experience),
+section:has(.contact),
+section:has(.gallery) {
+   background-image: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
+   background-position: cover;
+   background-color: var(--black);
+}
+
+.banner {
+   position: relative;
+   overflow: hidden;
+   font-weight: var(--fw-large);
+}
+
+.banner .container {
+   opacity: 0;
+   animation: show 500ms ease-in 100ms forwards;
+}
+
+.banner h1 {
+   color: var(--primary);
+   font-size: 5rem;
+}
+
+.experience .card {
+   padding: 1.5rem;
+   height: fit-content;
+   border: 30px var(--border);
+   font-weight: var(--fw-large);
+   background: var(--black);
+}
+
+.skills .card {
+   border: none;
+}
+
+.skills h1 {
+   color: var(--light-grey);
+}
+
+.skills .card:hover .card-img-top {
+   transform: scale(1.05);
+}
+
+.skills .card-body,
+.form-container {
+   border: 1rem var(--border);
+   padding: 1rem;
+   border-radius: 0.375rem;
+}
+
+.skills .card-img-top {
+   height: 20vw;
+   object-fit: contain;
+   transition: transform 0.3s ease-in-out;
+}
+
+.skills .card-text,
+.form-container {
+   color: var(--white);
+}
+
+main {
+   position: relative;
+}
+
+header>*,
+.experience {
+   min-height: calc(100vh - 85px);
+}
+
+.form-container {
+   max-width: 50%;
+   background-color: var(--bg-color);
+}
+
+footer {
+   border-top: var(--border-dashed);
+   background-color: var(--bg-color);
+   color: var(--white);
+}
+
+.contact {
+   min-height: calc(100vh - 110px);
+}
+
+.btn {
+   border-radius: 0;
+}
+
+.btn-primary,
+.btn-primary:active {
+   background-color: var(--primary);
+   border-color: var(--white);
+   color: var(--black);
+}
+
+.btn-primary:hover,
+.btn-danger:hover {
+   background-color: var(--black);
+   border-color: var(--white);
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+   background-color: var(--black);
+   border-color: var(--white);
+}
+
+.carousel-item {
+   height: 31.25rem;
+}
+
+@media screen and (max-width:1200px) {
+   .skills .card-img-top {
+      height: 40vw;
+   }
+}
+
+@media screen and (max-width:991px) {
+   .banner h1 {
+      font-size: 3.09rem;
+   }
+
+   .experience {
+      flex-wrap: wrap;
+      row-gap: 1rem
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .form-container {
+      max-width: 75%;
+   }
+}
+
+@media screen and (max-width: 575px) {
+
+   h1,
+   .banner h1 {
+      font-size: 1.545rem;
+   }
+
+   h2 {
+      font-size: calc(1.545rem - .25rem);
+   }
+
+   p,
+   footer,
+   label,
+   option,
+   .lead,
+   .form-select,
+   .font-control,
+   .btn {
+      font-size: 0.75rem;
+   }
+
+   .experience .card {
+      border-width: .5rem;
+      padding: 1rem 0;
+      text-align: justify;
+   }
+
+   .skills .card-text {
+      font-size: 1rem;
+   }
+
+   .skills .card-body {
+      border: 0.618rem var(--border);
+      padding: 0.75rem;
+      border-radius: 0.375rem;
+   }
+
+   .form-container {
+      max-width: 100%;
+      border: .5rem var(--border);
+   }
+
+   .carousel-item {
+      height: 420px;
+   }
+}
+
+@media screen and (max-width: 319px) {
+
+   h1,
+   h2,
+   p,
+   .banner h1,
+   .lead {
+      font-size: 1rem;
+   }
+
+   .navbar {
+      position: static;
+   }
+
+   .experience .card {
+      text-align: unset;
+   }
+}
+
+@keyframes show {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 0.5;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
