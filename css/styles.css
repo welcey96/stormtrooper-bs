@@ -23,6 +23,26 @@
    box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+   width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--primary);
+}
+
+::-webkit-scrollbar-track,
+nav,
+header,
+.skills .card-body,
+section:has(.experience),
+section:has(.contact),
+section:has(.gallery) {
+   background-image: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
+   background-position: cover;
+   background-color: var(--black);
+}
+
 body {
    font-family: var(--font);
    min-height: 100vh;
@@ -60,16 +80,7 @@ p {
    font-weight: var(--fw-light);
 }
 
-nav,
-header,
-.skills .card-body,
-section:has(.experience),
-section:has(.contact),
-section:has(.gallery) {
-   background-image: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
-   background-position: cover;
-   background-color: var(--black);
-}
+
 
 .banner {
    position: relative;
